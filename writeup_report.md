@@ -103,6 +103,7 @@ The final model architecture consisted of a convolution neural network with the 
 
 ![alt text][image8]
 
+
 #### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
