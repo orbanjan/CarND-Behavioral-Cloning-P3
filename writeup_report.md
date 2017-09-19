@@ -103,31 +103,14 @@ The final model architecture consisted of a convolution neural network with the 
 
 ![alt text][image8]
 
-
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to drive center laning. Then I repeated this process on track two in order to get more data points. Also drive at spot were carwas going out of track slowly to collect more images.
 
-![alt text][image2]
+To augment the data set, I also flipped images and angles thinking that this would help drivinbg center lane. 
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+After the collection process, I had 38,568 number of data points. I then preprocessed this data by cropping out unnessery upper and lower part. I did not resize the images, that could help further increasing the speed of learning.
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 10 as evidenced by not decreasing the loss either of trainig and validation. I used an adam optimizer so that manually training the learning rate wasn't necessary.
